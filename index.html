@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white.css">
+        <style type="text/css">
+        .reveal blockquote {
+            width: 90%;
+            border-left: 5px solid #aaa;
+            font-size: 90%;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+          <div class="slides">
+
+            <!-- Hello -->
+            <section>
+                <h1>say('Hello world')</h1>
+            </section>
+
+            <!-- Introduction -->
+            <section>
+
+              <section>
+                <h1>Introduction</h1>
+                Parti pris : es5, bien entendu plein d'autres trucs dans es6, et dans les libs
+              </section>
+
+              <!-- Définition -->
+              <section>
+                <h1>Définition</h1>
+                <blockquote>Une méthode de programmation qui préfère l'utilisation de fonctions aux changements d'état.</blockquote>
+              </section>
+
+              <!-- 1ere comparaison -->
+              <section>
+                1e comparaison concrète for -> foreach
+<pre><code class="javascript" data-trim data-noescape>
+var notes = [ 'do', 'ré', 'mi', 'fa' ];
+for (var i = 0; i < 10; i++) {
+  console.log(notes[i]);
+}
+</code></pre>
+vs
+<pre><code class="javascript" data-trim data-noescape>
+notes.forEach(function(fruit){
+  console.log(fruit);
+})
+</code></pre>
+
+                Quelle différence avec la POO ?
+                - on essaie d'éviter les changements d'état sur un objet donné, pour limiter les effets de bords
+              </section>
+            </section>
+
+            <!-- Fil rouge -->
+            <section>
+              <section>
+                <h1>Functions as first class citizen</h1>
+                <blockquote>
+                  Dans un langage traitant les fonctions comme des "citoyens de 1ère classe", les fonctions peuvent être passées en paramètre (et en retour) d'autres fonctions.
+                </blockquote>
+              </section>
+
+              <section>
+<pre><code class="javascript" data-trim data-noescape>
+function octave () {
+  return function (note) {
+    return note + 8;
+  }
+}
+octave(1) //  9
+octave(2) // 10
+</code></pre>
+              </section>
+
+              <section>
+                <h1>Fonction d'ordre supérieur</h1>
+                <blockquote>
+                ...
+                </blockquote>
+              </section>
+
+              <section>
+                Fonctions qui retournent des fonctions
+              </section>
+            </section>
+
+
+            <!-- Collections -->
+            <section>
+              <section>
+                <h1>Collections</h1>
+              </section>
+              <section>
+                <h1>filter()</h1>
+                <blockquote>
+                Applique une fonction à chaque élément, et<br> retourne <b>tous ceux</b> pour lesquels cette fonction renvoie True.
+                </blockquote>
+<pre><code class="javascript" data-trim data-noescape>
+var partition = [ 42, 24, 91, 14, 27, 34 ];
+
+partition.map(function (note){
+  return note < 30;
+})
+
+// [ 24, 14, 27 ]
+</code></pre>
+              </section>
+              <section>
+                <h1>find()</h1>
+                <blockquote>
+                Applique une fonction à chaque élément, et<br> retourne <b>le premier</b> pour lequel cette fonction renvoie True.
+                </blockquote>
+<pre><code class="javascript" data-trim data-noescape>
+var partition = [ 42, 24, 91, 14, 27, 34 ];
+
+partition.map(function (note){
+  return note < 30;
+})
+
+// 24
+</code></pre>
+              </section>
+              <section>
+                <h1>map()</h1>
+                <blockquote>
+                Applique une fonction à chaque élément, et<br> retourne <b>les résultats</b>.
+                </blockquote>
+<pre><code class="javascript" data-trim data-noescape>
+var partition = [ 42, 24, 91, 14, 27, 34 ];
+
+partition.map(octave)
+
+// [ 50, 32, 99, 22, 35, 42 ]
+</code></pre>
+              </section>
+            </section>
+
+            <!-- Effets de bord -->
+            <section>
+              <section>
+                <h1>Effets de bord / fonctions pures</h1>
+              </section>
+            </section>
+
+            <!-- Composition -->
+            <section>
+              <section>
+                <h1>Composition</h1>
+              </section>
+            </section>
+
+            <!-- Ecosystème -->
+            <section>
+              <section>
+                <h1>Ecosystème</h1>
+              </section>
+            </section>
+
+            <!-- Bye -->
+            <section>
+              <h1>Bye<h1>
+            </section>
+          </div>
+        </div>
+
+        <script src="lib/js/html5shiv.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script>
+            Reveal.initialize({
+                dependencies: [
+                    // Syntax highlight for <code> elements
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+                    // Speaker notes
+                    { src: 'plugin/notes/notes.js', async: true },
+                ]
+            });
+        </script>
+    </body>
+</html>
