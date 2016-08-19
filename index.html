@@ -12,6 +12,9 @@
       border-left: 5px solid #aaa;
       font-size: 90%;
     }
+    .nobullets li {
+      list-style-type: none;
+    }
     </style>
   </head>
   <body>
@@ -26,13 +29,28 @@
         <!-- Introduction -->
         <section>
           <h1>Introduction</h1>
-          Parti pris : es5, bien entendu plein d'autres trucs dans es6, et dans les libs
+          <ul>
+            <li>Découverte de la prog. fonctionnelle</li>
+            <li>Concepts basiques et exemples concrets</li>
+          </ul>
+        </section>
+
+        <!-- Parti pris -->
+        <section>
+          <h1>Warning</h1>
+          <ul>
+            <li>Malgré les syntaxes évoluées des specs modernes...</li>
+            <li>On utilisera ici ECMA5 / JS 1.8</li>
+            <li>Vérifiez la compatibilité sur MDN ou caniuse.com !</li>
+          </ul>
         </section>
 
         <!-- Définition -->
         <section>
           <h1>Définition</h1>
-          <blockquote>Une méthode de programmation qui préfère l'utilisation de fonctions aux changements d'état.</blockquote>
+          <blockquote>
+            Une méthode de programmation qui préfère l'utilisation de fonctions aux changements d'état.
+          </blockquote>
         </section>
 
         <!-- Comparaison -->
@@ -44,7 +62,8 @@
             <h1>Functions as first class citizen</h1>
             <h4>Fonction d'ordre supérieur</h4>
             <blockquote>
-              Dans un langage traitant les fonctions comme des "citoyens de 1ère classe", les fonctions peuvent être passées en paramètre (et en retour) d'autres fonctions.
+              Dans un langage traitant les fonctions comme des "citoyens de 1ère classe",
+              les fonctions peuvent être passées en paramètre (et en retour) d'autres fonctions.
             </blockquote>
           </section>
           <section data-external="slides/firstorderfunctions.html"></section>
@@ -70,7 +89,9 @@
 
           <section>
             <h1>Fonctions pures</h1>
-            <blockquote>Une fonction pure est une fonction qui n'utilise que ses paramètres et ses variables locales</blockquote>
+            <blockquote>
+              Une fonction pure est une fonction qui n'utilise que ses paramètres et ses variables locales.
+            </blockquote>
           </section>
 
           <section data-external="slides/ex_fonctionimpure.html"></section>
@@ -79,7 +100,6 @@
           <section>
             <h1>La POO et la prog. fonctionnelle sont incompatibles ?</h1>
           </section>
-
           <section data-external="slides/mixpoofonctionelle.html"></section>
         </section>
 
@@ -95,12 +115,13 @@
           <section>
             <h1>Ecosystème</h1>
           </section>
-          <section data-external="slides/ecosysteme.html"></section>
+          <section data-external="slides/lodash.html"></section>
+          <section data-external="slides/async.html"></section>
         </section>
 
         <!-- Bye -->
         <section>
-          <h1>Bye<h1>
+          <h1>Questions<h1>
         </section>
       </div>
     </div>
