@@ -1,0 +1,19 @@
+<h4>Une ƒ° en paramètre</h4>
+<pre><code class="javascript" data-trim data-noescape>
+notes.forEach(function(note){
+  console.log(note);
+})
+</code></pre>
+
+<br>
+
+<h4>Une ƒ° en retour</h4>
+<pre><code class="javascript" data-trim data-noescape>
+function octave () {
+  return function (note) {
+    return note + 8;
+  }
+}
+octave(1) //  9
+octave(2) // 10
+</code></pre>

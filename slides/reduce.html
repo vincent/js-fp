@@ -1,0 +1,17 @@
+<h1>reduce()</h1>
+
+<blockquote>
+Réduit une liste, en appliquant une fonction à chaque<br> élément, et retourne <b>le résultat final</b>.
+</blockquote>
+
+<br>
+
+<pre><code class="javascript" data-trim data-noescape>
+var liste = [ 1, 2, 3 ];
+
+function somme(acc, e) {
+  return acc + e;
+}
+
+liste.reduce(somme, 0) // 6
+</code></pre>
