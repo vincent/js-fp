@@ -52,16 +52,15 @@ notes.forEach(function(fruit){
   console.log(fruit);
 })
 </code></pre>
-
-                Quelle différence avec la POO ?
-                - on essaie d'éviter les changements d'état sur un objet donné, pour limiter les effets de bords
               </section>
+
             </section>
 
             <!-- Fil rouge -->
             <section>
               <section>
                 <h1>Functions as first class citizen</h1>
+                <h1>Fonction d'ordre supérieur</h1>
                 <blockquote>
                   Dans un langage traitant les fonctions comme des "citoyens de 1ère classe", les fonctions peuvent être passées en paramètre (et en retour) d'autres fonctions.
                 </blockquote>
@@ -80,13 +79,6 @@ octave(2) // 10
               </section>
 
               <section>
-                <h1>Fonction d'ordre supérieur</h1>
-                <blockquote>
-                ...
-                </blockquote>
-              </section>
-
-              <section>
                 Fonctions qui retournent des fonctions
               </section>
             </section>
@@ -97,49 +89,9 @@ octave(2) // 10
               <section>
                 <h1>Collections</h1>
               </section>
-              <section>
-                <h1>filter()</h1>
-                <blockquote>
-                Applique une fonction à chaque élément, et<br> retourne <b>tous ceux</b> pour lesquels cette fonction renvoie True.
-                </blockquote>
-<pre><code class="javascript" data-trim data-noescape>
-var partition = [ 42, 24, 91, 14, 27, 34 ];
-
-partition.map(function (note){
-  return note < 30;
-})
-
-// [ 24, 14, 27 ]
-</code></pre>
-              </section>
-              <section>
-                <h1>find()</h1>
-                <blockquote>
-                Applique une fonction à chaque élément, et<br> retourne <b>le premier</b> pour lequel cette fonction renvoie True.
-                </blockquote>
-<pre><code class="javascript" data-trim data-noescape>
-var partition = [ 42, 24, 91, 14, 27, 34 ];
-
-partition.map(function (note){
-  return note < 30;
-})
-
-// 24
-</code></pre>
-              </section>
-              <section>
-                <h1>map()</h1>
-                <blockquote>
-                Applique une fonction à chaque élément, et<br> retourne <b>les résultats</b>.
-                </blockquote>
-<pre><code class="javascript" data-trim data-noescape>
-var partition = [ 42, 24, 91, 14, 27, 34 ];
-
-partition.map(octave)
-
-// [ 50, 32, 99, 22, 35, 42 ]
-</code></pre>
-              </section>
+              <section data-external="slides/filter.html"></section>
+              <section data-external="slides/find.html"></section>
+              <section data-external="slides/map.html"></section>
             </section>
 
             <!-- Effets de bord -->
@@ -147,6 +99,21 @@ partition.map(octave)
               <section>
                 <h1>Effets de bord / fonctions pures</h1>
               </section>
+              <section data-external="slides/poocnul.html"></section>
+
+              <section>
+                <h1>Fonctions pures</h1>
+                <blockquote>Une fonction pure est une fonction qui n'utilise que ses paramètres et ses variables locales</blockquote>
+              </section>
+
+              <section data-external="slides/ex_fonctionimpure.html"></section>
+              <section data-external="slides/ex_fonctionpure.html"></section>
+
+              <section>
+                <h1>La POO et la prog. fonctionnelle sont incompatibles ?</h1>
+              </section>
+
+              <section data-external="slides/mixpoofonctionelle.html"></section>
             </section>
 
             <!-- Composition -->
@@ -181,6 +148,9 @@ partition.map(octave)
 
                     // Speaker notes
                     { src: 'plugin/notes/notes.js', async: true },
+
+                    // External slides
+                    { src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
                 ]
             });
         </script>

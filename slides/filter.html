@@ -1,0 +1,15 @@
+<h1>filter()</h1>
+
+<blockquote>
+Applique une fonction à chaque élément, et<br> retourne <b>tous ceux</b> pour lesquels cette fonction renvoie True.
+</blockquote>
+
+<pre><code class="javascript" data-trim data-noescape>
+var partition = [ 42, 24, 91, 14, 27, 34 ];
+
+partition.map(function (note){
+  return note < 30;
+})
+
+// [ 24, 14, 27 ]
+</code></pre>
