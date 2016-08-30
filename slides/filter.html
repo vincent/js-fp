@@ -9,7 +9,7 @@ Applique une fonction à chaque élément, et<br> retourne <b>tous ceux</b> pour
 <pre><code class="javascript" data-trim data-noescape>
 var partition = [ 42, 24, 91, 14, 27, 34 ];
 
-partition.map(function (note){
+partition.filter(function (note){
   return note < 30;
 })
 
