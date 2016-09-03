@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/white.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
     <style type="text/css">
     .reveal blockquote {
       width: 90%;
@@ -15,10 +16,18 @@
     .nobullets li {
       list-style-type: none;
     }
+    .clearfix {
+      overflow: auto;
+      zoom: 1;
+    }
+    .speaker-pic {
+      border-radius: 50%;
+      float: left;
+    }
     </style>
   </head>
   <body>
-    <div class="reveal">
+    <div class="reveal jsfp">
       <div class="slides">
 
         <!-- Hello -->
@@ -26,16 +35,32 @@
             <h1>say('Hello world')</h1>
         </section>
 
+        <!-- Authors -->
+        <section>
+          <div class="clearfix">
+            <img class="speaker-pic" src="css/alain.jpg">
+            <h2>Alain Wagner</h2>
+            <span>In Pastafari we trust</span>
+          </div>
+          <br><br>
+          <div class="clearfix">
+            <img class="speaker-pic" src="css/vincent.jpg">
+            <h2>Vincent Lark</h2>
+            <span>In Pastafari we trust</span>
+          </div>
+        </section>
+
         <!-- Introduction -->
         <section>
           <h1>Introduction</h1>
           <ul>
             <li>Découverte de la prog. fonctionnelle</li>
-            <li>Concepts basiques et exemples concrets</li>
+            <li>Concepts basiques et exemples concrets<br><br></li>
+            <li>Posez vos questions pendant l'atelier !</li>
           </ul>
         </section>
 
-	    <section>
+        <section>
           <h1>À quoi ça sert?</h1>
           <ul>
             <li>Plus robuste</li>
@@ -43,7 +68,7 @@
             <li>Plus modulaire</li>
             <li>Moins de bugs</li>
           </ul>
-	    </section>
+        </section>
 
         <!-- Parti pris -->
         <section>
@@ -66,6 +91,14 @@
         <!-- Comparaison -->
         <section data-external="slides/comparaison.html"></section>
 
+        <!-- Exercice 1 -->
+        <section>
+          <section>
+            <h1>Getting started</h1>
+          </section>
+          <section data-external="slides/exercices/ex1.html"></section>
+        </section>
+
         <!-- Fil rouge -->
         <section>
           <section>
@@ -87,6 +120,7 @@
           <section data-external="slides/filter.html"></section>
           <section data-external="slides/find.html"></section>
           <section data-external="slides/map.html"></section>
+          <section data-external="slides/map2.html"></section>
           <section data-external="slides/reduce.html"></section>
         </section>
 
@@ -151,6 +185,16 @@
           // External slides
           { src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
         ]
+      });
+    </script>
+    <script type="text/javascript">
+      document.addEventListener('ready', function () {
+
+        // Patch exo links
+        [].forEach.call(document.getElementsByClassName('exo_url'), function (el) {
+          el.innerHTML = 'http://localhost:8082';
+        });
+
       });
     </script>
   </body>

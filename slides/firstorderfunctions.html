@@ -9,11 +9,13 @@ notes.forEach(function(note){
 
 <h4>Une ƒ° en retour</h4>
 <pre><code class="javascript" data-trim data-noescape>
-function octave () {
+function transpose (interval) {
   return function (note) {
-    return note + 8;
+    return note + interval;
   }
 }
+
+var octave = transpose(8);
 octave(1) //  9
 octave(2) // 10
 </code></pre>
