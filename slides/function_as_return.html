@@ -1,0 +1,27 @@
+<h4>Une ƒ° en retour</h4>
+<pre><code class="javascript" data-trim data-noescape>
+function transpose (interval) {
+  return function (note) {
+    return note + interval;
+  }
+}
+
+var octave = transpose(8);
+octave(1) //  9
+octave(2) // 10
+</code></pre>
+
+<br>
+
+<pre class="fragment"><code class="javascript" data-trim data-noescape>
+function transpose (type) {
+  switch (type) {
+    case 'octave': return function (note) {
+                            return note + 8;
+                          }
+    case 'note': return function (note) {
+                          return note + 1;
+                        }
+  }
+}
+</code></pre>
