@@ -24,11 +24,32 @@
       border-radius: 50%;
       float: left;
     }
+    table.msg {
+      border: black 1px solid;
+    }
+    table.msg td {
+      border-right: black 1px solid;
+    }
+
+    #demomidi {
+      font-size: 38px;
+    }
+
+    .reveal section img.sshot {
+      border: 0;
+      box-shadow: none;
+    }
     </style>
   </head>
   <body>
     <div class="reveal jsfp">
       <div class="slides">
+
+        <!-- Hello -->
+        <section>
+            <h1>JavaScript fonctionnel</h1>
+            <h2>Paris Web'16</h2>
+        </section>
 
         <!-- Hello -->
         <section>
@@ -45,7 +66,7 @@
           <div class="clearfix">
             <img class="speaker-pic" src="css/alain.jpg">
             <h2>Alain Vagner</h2>
-            <span>In Pastafari we trust</span>
+            <span>fan de procrastination fonctionnelle</span>
           </div>
           <br><br>
           <div class="clearfix">
@@ -101,6 +122,13 @@
           <blockquote>
             Une méthode de programmation qui préfère l'utilisation de fonctions aux changements d'état.
           </blockquote>
+        <aside class="notes">
+            - plein d'autres définitions, on a essayé de faire simple ici<br>
+            - concept de base: fonction, <br>
+            - on va tout faire à base de fonction, composer des fonctions entre elles, etc.<br>
+            - style de programmation et paradigme, d'autres paradigmes existent: impératif, orienté objet, ...<br>
+            - changement d'état: état de votre app javascript = contenu de vos variables à un instant t. Plus les états et les changements entre états sont complexes, plus on risque des bugs via effets de bord.<br>
+          </aside>
         </section>
 
         <section>
@@ -115,7 +143,7 @@
             Pourquoi des gens se sont tournés vers la prog. fonctionelle ?
             <br>
             Nous irons plus en profondeur par la suite, mais on peut déjà dire que les buts sont d'abord<br>
-            - de réduire les effets de bords<br>
+            - de réduire les effets de bords, un effet de bord étant un changement d'état non voulu, non maîtrisé<br>
             - de rendre le code plus maintenable<br>
             - plus modulaire<br>
             - plus robuste<br>
@@ -136,7 +164,8 @@
           </section>
           <section data-external="slides/exercices/_start.html"></section>
           <section data-external="slides/exercices/ex1.html"></section>
-          <section data-external="slides/midi.html"></section>
+          <section data-state="midi" data-external="slides/midi.html"></section>
+          <section data-external="slides/midi2.html"></section>
         </section>
 
         <!-- Fil rouge -->
@@ -231,6 +260,9 @@
     <script src="js/reveal.js"></script>
     <script>
       Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        showNotes: true,
         dependencies: [
           // Syntax highlight for <code> elements
           { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
@@ -245,11 +277,27 @@
     </script>
     <script type="text/javascript">
       document.addEventListener('ready', function () {
-
         // Patch exo links
         [].forEach.call(document.getElementsByClassName('exo_url'), function (el) {
           el.innerHTML = 'http://localhost:8082';
         });
+
+      var start = 0;
+      var stop = 0;
+      Reveal.addEventListener("midi", function() {
+          console.log('pouet');
+          document.getElementById("demomidi").addEventListener("mousedown", function() {
+              console.log('mousedown');
+              document.getElementById("midimsg").innerHTML = '<table id="midimsg" class="msg"><tr><td>channel</td><td>subtype</td><td>deltaTime</td><td>noteNumber</td></tr><tr><td>0</td><td>noteOn</td><td>0</td><td>72</td></tr></table>';
+              start = new Date().getTime();
+          });
+          document.getElementById("demomidi").addEventListener("mouseup", function() {
+              console.log("mouseup");
+              stop = new Date().getTime();
+              document.getElementById("midimsg").innerHTML = '<table id="midimsg" class="msg"><tr><td>channel</td><td>subtype</td><td>deltaTime</td><td>noteNumber</td></tr><tr><td>0</td><td>noteOn</td><td>0</td><td>72</td></tr><tr><td>0</td><td>noteOff</td><td>'+(stop-start)+'</td><td>72</td></tr></table>';
+          });
+      });
+
 
       });
     </script>

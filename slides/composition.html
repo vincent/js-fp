@@ -7,6 +7,42 @@
 
 <!-- exemple -->
 <pre><code class="javascript" data-trim data-noescape>
+afficher les notes transposées
+
+fonctions : show, transpose
+
+en entrée : notes [ [1, 2], [2, 0.5], [3, 0.25] ]
+
+
+function addToDomElt(elem, html) {
+	document.getElementById(elem).innerHtml = html;
+}
+
+function noteValueToText(note) {
+	var notes = [ 'do', 'ré', 'mi', 'fa' , 'sol', 'la', 'si'];
+	return notes[note % 7];
+}
+
+function noteDurationToText(val) {
+	var durations = {'1': 'noire', '2': 'blanche', '4': 'ronde', '0.5': 'croche'}
+	return notes[val.toString()];
+}
+
+// []
+function displayNote(note) {
+	return '['+
+}
+
+//
+function echo() {
+	
+
+}
+
+addToDomElt('result', 
+	notes.forEach()
+
+);
 
 
 </code></pre>
