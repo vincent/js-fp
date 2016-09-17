@@ -1,0 +1,24 @@
+{
+  "name": "js-fp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "bash -c \"node_modules/http-server/bin/http-server -c-1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincent/js-fp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vincent/js-fp/issues"
+  },
+  "homepage": "https://github.com/vincent/js-fp#readme"
+}
