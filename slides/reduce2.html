@@ -7,13 +7,13 @@ Réduit une liste, en appliquant une fonction à chaque<br> élément, et retour
 <br>
 
 <pre><code class="javascript" data-trim data-noescape>
-var liste = [ 1, 2, 3 ];
+var liste = [ -1, -2, 3, 4 ];
 
-function somme(acc, e) {
-  return acc + e;
+function positif(acc, e) {
+  return acc + (e >= 0);
 }
 
-liste.reduce(somme, 0) // 6
+liste.reduce(positif, 0) // 2
 </code></pre>
 
 <aside class="notes">

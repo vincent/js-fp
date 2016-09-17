@@ -1,0 +1,17 @@
+<h1>Cette ƒ° est-elle pure ?</h1>
+
+<pre><code class="javascript" data-trim data-noescape>
+var partition = [ 42, 24, 91, 14, 27, 34 ];
+
+function addNote(note) {
+  return [].concat(partition, note);
+}
+</code></pre>
+
+<h4 class="fragment"><br>NON: elle dépend d'une variable externe<br>elle n'est pas déterministe</h4>
+
+<aside class="notes">
+  Cette fonction est impure car elle dépend de la variable externe partition<br>
+  Si appelée avant et après avoir modifier partition => pas le même résultat<br>
+  Condition "déterministe" pas remplie
+</aside>

@@ -1,15 +1,15 @@
 <h4>Une ƒ° en paramètre</h4>
 <pre><code class="javascript" data-trim data-noescape>
-notes.forEach(function(note){
-  console.log(note);
+simpleTrack().forEach(function (event) {
+  console.log(event);
 })
 </code></pre>
 
 <br>
 
 <pre class="fragment"><code class="javascript" data-trim data-noescape>
-function show (note){
-  console.log(note);
+function show (event){
+  console.log(event);
 }
-notes.forEach(show)
+simpleTrack().forEach(show)
 </code></pre>
