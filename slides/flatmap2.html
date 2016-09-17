@@ -1,0 +1,31 @@
+<h1>flatMap()</h1>
+
+
+<pre><code class="javascript" data-trim data-noescape>
+// effet "chord" sur un flux midi
+// joue en parallèle de chaque note, note+2 et note+4
+function transpose (interval, note) {
+	var result = clone(note);
+	result.noteNumber += interval;
+	return result;
+}
+
+var midiStream = [{noteNumber:1}, {noteNumber:5}];
+
+midiStream.flatMap(function(note) {
+	return [transpose(2, note), transpose(4, note)];
+})
+
+// retourne [{noteNumber: 1}, {noteNumber:3}, {noteNumber:5}, 
+// {noteNumber: 5}, {noteNumber: 7}, {noteNumber: 9}]
+
+</code></pre>
+
+<aside class="notes">
+
+</aside>
+
+<!-- 
+
+ça pourrait faire l'objet d'un exercice?
+-->
