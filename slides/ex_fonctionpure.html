@@ -1,9 +1,14 @@
 <h1>Cette ƒ° est-elle pure ?</h1>
 
 <pre><code class="javascript" data-trim data-noescape>
-var partition = [ 42, 24, 91, 14, 27, 34 ];
-
-function addNote(note) {
+function addNote(partition, note) {
   return [].concat(partition, note);
 }
 </code></pre>
+
+<h4 class="fragment"><br>OUI: elle est déterministe<br>et n'effectue aucune mutation d'une variable externe</h4>
+
+<aside class="notes">
+  Cette fonction est pure car elle ne dépend d'aucune variable externe<br>
+  Et renverra tjs le même résultat avec les mêmes paramètres
+</aside>
