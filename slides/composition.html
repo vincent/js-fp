@@ -2,11 +2,25 @@
 
 <ul>
     <li>Composer des fonctions simples pour en construire de plus complexes</li>
-    <li>Comme la composition de fonctions en maths: le résultat d'une fonction est passé à la suivante, le résultat de la dernière est le résultat de l'ensemble</li>
+    <li>Comme la composition de fonctions en maths: 
+    	<ul>
+    		<li>le résultat d'une fonction est passé à la suivante,</li>
+    		<li>le résultat de la dernière est le résultat de l'ensemble</li>
+    	</ul>
 </ul>
 
 <!-- exemple -->
 <pre><code class="javascript" data-trim data-noescape>
+//exemple non fonctionnel
+
+const toSlug = input => encodeURIComponent(
+  input.split(' ')
+    .map(str => str.toLowerCase())
+    .join('-')
+);
+</code></pre>
+
+<!--
 afficher les notes transposées
 
 fonctions : show, transpose
@@ -43,5 +57,6 @@ addToDomElt('result',
   notes.forEach()
 
 );
-</code></pre>
+
+-->
 

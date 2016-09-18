@@ -1,0 +1,15 @@
+<h1>Composition</h1>
+
+<!-- exemple -->
+<pre><code class="javascript" data-trim data-noescape>
+//exemple fonctionnel
+
+const pipe = require('lodash/fp/pipe');
+const toSlug = pipe([
+  split(' '),
+  map(toLowerCase),
+  join('-'),
+  encodeURIComponent
+]);
+
+</code></pre>
