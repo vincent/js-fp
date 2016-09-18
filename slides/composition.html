@@ -37,7 +37,8 @@ function noteValueToText(note) {
   return notes[note % 7];
 }
 
-function noteDurationToText(val) {
+function noteDurationToText(val)
+ {
   var durations = {'1': 'noire', '2': 'blanche', '4': 'ronde', '0.5': 'croche'}
   return notes[val.toString()];
 }

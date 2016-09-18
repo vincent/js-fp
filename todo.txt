@@ -1,7 +1,36 @@
-- composition
+v - flatmap
+	- sur des int, plus clair
+
+- insérer des exos après flatmap
+
+- poo à simplifier / aérer
+
+- monad voir définition lien jargon
+
+
+- composition :
+	- décrire les sous-fonctions de l'exemple
+ 	- currying après pour justifier
+
+- slide react à splitter:
+	- tu fais une interface et on te demande de rajouter un undo !!!
+
+	- redux (flux) : reducers functions pures => time travel lien vers vidéo time travel
+	- exemple de fonction react
+
+- trouver une personne pour la répét
+
+- trouver un fichier midi 30s
+
+- rajouter un bouton save
+
+
+- préciser dans les slides qui fait quoi?
 
 
 
+- temps absolu relatif
 
+- exo composition basé sur les précédents
 
 
