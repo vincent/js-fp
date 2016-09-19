@@ -1,36 +1,20 @@
 v - flatmap
 	- sur des int, plus clair
-
-- insérer des exos après flatmap
-
-- poo à simplifier / aérer
-
-- monad voir définition lien jargon
-
-
+v- poo à simplifier / aérer
+- trouver une personne pour la répét
 - composition :
 	- décrire les sous-fonctions de l'exemple
  	- currying après pour justifier
-
+- slide (tail) recursion
+- monad voir définition lien jargon
 - slide react à splitter:
 	- tu fais une interface et on te demande de rajouter un undo !!!
-
 	- redux (flux) : reducers functions pures => time travel lien vers vidéo time travel
 	- exemple de fonction react
-
-- trouver une personne pour la répét
-
 - trouver un fichier midi 30s
-
 - rajouter un bouton save
-
-
 - préciser dans les slides qui fait quoi?
-
-
-
+- insérer des exos après flatmap
 - temps absolu relatif
-
 - exo composition basé sur les précédents
-
-
+- rajouter qq images / blagues ?

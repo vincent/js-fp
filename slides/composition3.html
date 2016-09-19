@@ -1,7 +1,18 @@
-<h1>Tap() et trace()</h1>
+<h1>Composition</h1>
 
 <!-- exemple -->
 <pre><code class="javascript" data-trim data-noescape>
-// tap et trace de lodash?
+//exemple fonctionnel
+
+function displayNotes(elem) {
+	pipe(
+		map(noteValueToText),
+		join(' '),
+		addToDomElem(elem)
+	);
+}
+
+var outputNotes = displayNotes('output');
+outputNotes([1,2,3]);
 
 </code></pre>
