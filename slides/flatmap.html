@@ -1,3 +1,4 @@
+<img class="workimg" src="css/workimg/johnny-automatic-testing-for-flatness-800px.png" style="position:absolute;right:-16%;height:71%">
 <h1>flatMap()</h1>
 
 <blockquote>
@@ -10,15 +11,14 @@ Applique une fonction à chaque élément, et<br> retourne une liste plate</b>.
 // définition de flatMap
 // https://gist.github.com/samgiles/762ee337dff48623e729
 Array.prototype.flatMap = function(lambda) { 
-    return Array.prototype.concat.apply([], this.map(lambda)); 
+  return Array.prototype.concat.apply([], this.map(lambda)); 
 };
 
 </code></pre>
 
 <aside class="notes">
-même chose qu'un map suivi d'un flatten, on récupère ce que nous renvoie map, potentiellement des tableaux imbriqués et on les aplatit dans un seul tableau
-
-n'existe pas en JS mais utilisation fréquente. La plupart des librairies style lodash l'ont. 
+même chose qu'un map suivi d'un flatten, on récupère ce que nous renvoie map, potentiellement des tableaux imbriqués et on les aplatit dans un seul tableau<br>
+n'existe pas en JS mais utilisation fréquente. La plupart des librairies style lodash l'ont.<br>
 Est proposé à la standardisation pour ES7...
 </aside>
 

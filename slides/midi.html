@@ -1,19 +1,22 @@
+<img class="workimg" src="css/workimg/johnny-automatic-decorative-lyre-800px.png" style="position:absolute">
 <h1>MIDI ?</h1>
 
 <ul>
-<li>Suite de messages</li>
-<li>Un instrument midi minimaliste: <button id="demomidi">Do</button></li>
-<li>Structure de message: <br>
-<table id="midimsg" class="msg"><tr><td>channel</td><td>subtype</td><td>deltaTime</td><td>noteNumber</td></tr></table> 
-</li>
+  <li>Format de fichier / protocole pour la musique</li>
+  <li>Suite de messages</li>
+  <li>Un instrument midi minimaliste: <button id="demomidi">Do</button></li>
+  <li>Structure de message: <br>
+    <table id="midimsg" class="msg"><tr><td>channel</td><td>subtype</td><td>deltaTime</td><td>noteNumber</td></tr></table> 
+  </li>
 </ul>
 <!-- pour l'animation, voir dans index.html -->
 
 <aside class="notes">
-   - prog. fonctionnelle s'applique bien à des flux de données. Le midi fonctionne en mode flux ou en mode fichier. Le fichier est simplement un enregistrement du flux.<br>
-   - principaux attributs du message:<br>
-   - channel: 16 canaux midi, peuvent jouer de la musique simultanément, on peut associer un instrument différent à chaque canal<br>
-   - subtype: type de message, on ne verra quasi que noteOn et noteOff pour démarrer une note et la terminer<br>
-   - deltaTime: temps auquel la note sera jouée à partir du début de la session<br>
-   - noteNumber: numéro de la note à jouer en nombre de tons?<br> 
+  créé en ~ 1980
+  prog. fonctionnelle s'applique bien à des flux de données. Le midi fonctionne en mode flux ou en mode fichier. Le fichier est simplement un enregistrement du flux.<br>
+  principaux attributs du message:<br>
+  channel: 16 canaux midi, peuvent jouer de la musique simultanément, on peut associer un instrument différent à chaque canal<br>
+  subtype: type de message, on ne verra quasi que noteOn et noteOff pour démarrer une note et la terminer<br>
+  deltaTime: temps auquel la note sera jouée à partir du début de la session<br>
+  noteNumber: numéro de la note à jouer en nombre de tons?<br> 
 </aside>
