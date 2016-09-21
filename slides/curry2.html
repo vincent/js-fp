@@ -2,19 +2,19 @@
 
 
 <pre><code id="composition" class="javascript" data-trim data-noescape>
-    function trace(label, message) {
-        console.log(label+': '+message);
-    }
+function trace(label, message) {
+  console.log(label+': '+message);
+}
 
-    function trace_curry(label) {
-        return function (message) {
-            trace(label, message);
-        }
-    }
+function trace_curry(label) {
+  return function (message) {
+    trace(label, message);
+  }
+}
 
-    var trace_event = trace_curry('event');
-    trace_event('init');
-    // affiche dans la console 'event: init'
+var trace_event = trace_curry('event');
+trace_event('init');
+// affiche dans la console 'event: init'
 </code></pre>
 
 

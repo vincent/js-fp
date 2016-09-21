@@ -1,0 +1,26 @@
+
+<img class="workimg" src="css/workimg/wine-maiden-800px.png" style="right: -20%;position:absolute;top: 25%;height: 60%;">
+<h1>Promises</h1>
+
+<pre><code class="javascript" data-trim data-noescape>
+function allerAuBar() {
+  return new Promise(function (resolve, reject) {
+    boireTrenteBieres()
+      .done(resolve)
+      .fail(reject)
+  }
+}
+
+onSortCeSoir()
+  .then(allerAuBar)
+  .then(allerEnBoite)
+  .catch(dormir)
+
+</code></pre>
+
+<aside class="notes">
+qui peut affirmer avec certitude qu'il peut boire 30 bières ?<br>
+les Promises peuvent être chainées:<br>
+si ça va pas trop on rejette, sinon on "resoud"<br>
+l'appel peut catcher tous les problèmes potentiels dans un seul block
+</aside>

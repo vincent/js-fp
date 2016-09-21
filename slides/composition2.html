@@ -12,10 +12,10 @@ function noteValueToText(note) {
 }
 
 function displayNotes(notes, elem) {
-    var buffer = '';
-    for (var i=0; i< notes.length; i++) {
-        buffer += noteValueToText(notes[i])+ ' ';
-    }
-    document.getElementById(elem).innerHTML = buffer;
+  var buffer = '';
+  for (var i=0; i< notes.length; i++) {
+    buffer += noteValueToText(notes[i])+ ' ';
+  }
+  document.getElementById(elem).innerHTML = buffer;
 }
 </code></pre>

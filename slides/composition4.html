@@ -8,13 +8,13 @@ Comment débugguer un pipe()?<br>
 // avec tap() et trace() !
 
 function displayNotes(elem) {
-	pipe(
-		map(noteValueToText),
-		tap(alert),
-		join(' '),
-		trace('après le join()'),
-		addToDomElem(elem)
-	);
+  pipe(
+    map(noteValueToText),
+    tap(alert),
+    join(' '),
+    trace('après le join()'),
+    addToDomElem(elem)
+  );
 }
 
 </code></pre>

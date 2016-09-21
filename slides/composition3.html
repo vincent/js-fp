@@ -5,11 +5,11 @@
 //exemple fonctionnel
 
 function displayNotes(elem) {
-	pipe(
-		map(noteValueToText),
-		join(' '),
-		addToDomElem(elem)
-	);
+  pipe(
+    map(noteValueToText),
+    join(' '),
+    addToDomElem(elem)
+  );
 }
 
 var outputNotes = displayNotes('output');

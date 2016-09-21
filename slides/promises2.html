@@ -1,0 +1,30 @@
+
+<img class="workimg" src="css/workimg/varsity-suit-800px.png" style="left: -20%;position:absolute;top: 8%;height: 80%;">
+<h1>Promises</h1>
+
+<pre><code class="javascript" data-trim data-noescape>
+function onSortCeSoir() {
+  return new Promise(function (resolve, reject) {
+    $.ajax('http://api.meteofrance.com/soir')
+      .done(function (meteo) {
+        if (meteo.pluie) reject();
+        else resolve();
+      })
+      .fail(reject)
+  }
+}
+
+onSortCeSoir()
+  .then(allerAuBar)
+  .catch(dormir)
+
+</code></pre>
+
+<aside class="notes">
+function onSortCeSoir()<br>
+si meteofrance dit qu'il ne pleut pas, on "resoud"<br>
+sinon, on "rejette"<br>
+l'appel décide de quoi faire dans les deux cas<br>
+permet de simplifier vos API quand c'est possible (type oui/non)<br>
+puisque l'appel reste le même
+</aside>
