@@ -1,27 +1,16 @@
 <h1>React</h1>
 
 <ul>
-<li>librairie basée composants pour les vues Web</li>
-<li>syntaxe déclarative</li>
-<li>philosophie fonctionnelle: 
-  <ul>
-    <li>un composant = une fonction</li>
-    <li>VirtualDOM, modifications du DOM = effets de bord</li>
-    <li>Top-down rendering</li>
-    <li>Stateless functional components</li>
-    <li>Limiter les états</li>
-    <li>Architecture flux: état immuable</li>
-  </ul>
-</li>
-<li>D'autres libs vont plus loin, ex: <a href="https://baconjs.github.io/">bacon.js</a></li>
+	<li>librairie basée composants pour les vues Web</li>
+	<li>inspiration fonctionnelle</li>
+	<li>découpler l'état de l'affichage</li>
+	<li>un composant = une fonction !</li>
 </ul>
+
 
 <aside class="notes">
 - component = fonction, et donc composition de fonctions pour faire une interface (syntaxe déclarative jsx)<br>
-- top-down rendering: on passe les paramètres à la fenêtre, qui va propager les informations via les props aux composants fils<br>
-- stateless functional components: nerf de la guerre dans react = la gestion des states. Très sensible aux effets de bords. Facebook encourage l'écriture de petits composants appelés stateless functional, dont la sortie dépend totalement des paramètres en entrée<br>
-- état immuable, on réaffiche lorsque l'état change. Prob de savoir si l'état a changé, avec état immuable on le sait<br>
-- bacon.js: functional reactive programming, travaille sur des flux d'événements<br>
+- fonction qui prend en entrée le state et qui génère du html / l'arbre dom de l'appli<br>
 </aside>
 
 

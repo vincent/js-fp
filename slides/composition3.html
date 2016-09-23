@@ -5,7 +5,7 @@
 //exemple fonctionnel
 
 function displayNotes(elem) {
-  pipe(
+  return pipe(
     map(noteValueToText),
     join(' '),
     addToDomElem(elem)
