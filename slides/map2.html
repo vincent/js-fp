@@ -7,13 +7,13 @@ Applique une fonction à chaque élément, et<br> retourne <b>les résultats</b>
 <br>
 
 <pre><code class="javascript" data-trim data-noescape>
-var auteurs = [ 'Tchaikovsky', 'Mozart', 'Bach' ];
+var auteurs = [ 'Beethoven', 'Mozart', 'Bach' ];
 
 function biographie (auteur) {
-  return wikipedia.search('classical ' + auteur);
+  F.wikipedia(auteur).then(function(c) {console.log(auteur+': '+c)});
 }
 
-var bios = auteurs.map(biographie)
+var bios = auteurs.map(biographie);
 </code></pre>
 
 <aside class="notes">
