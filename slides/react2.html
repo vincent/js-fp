@@ -1,20 +1,25 @@
 <h1>React</h1>
+	un composant = une fonction !
 
-  <ul>
-    <li>Stateless functional components</li>
-    <li>Architecture flux: état immuable</li>
-    <li><a href="https://www.youtube.com/watch?v=xsSnOQynTHs">Time Travel !</a></li>
-  </ul>
-<br>
-<br>
-<ul>
-<li>D'autres libs vont plus loin, ex: <a href="https://baconjs.github.io/">bacon.js</a></li>
-</ul>
+<pre><code class="javascript" data-trim data-noescape>
+import React from 'react';
+
+const HelloWorld = {{name}} =>  {
+	const sayHi = (event) => {
+		alert(`Hi ${name}!§`);
+	};
+	return {
+		&lt;div&gt;
+			&lt;a href="#" onClick="{sayHi}"&gt;Say Hi&lt;/a&gt;
+		&lt;/div&gt;
+	};
+};
+</code></pre>
 
 
 <aside class="notes">
-- stateless functional components: nerf de la guerre dans react = la gestion des states. Très sensible aux effets de bords. Facebook encourage l'écriture de petits composants appelés stateless functional, dont la sortie dépend totalement des paramètres en entrée<br>
-- état immuable, on réaffiche lorsque l'état change. Prob de savoir si l'état a changé, avec état immuable on le sait<br>
-- Undo: est-ce qu'on vous a déjà demandé de rajouter une fonctionnalité de type Undo dans une appli web après que le dev ait commencé ? La galère! Avec React et Immutable, c'est cadeau. Même le time travel! <br>
-- bacon.js: functional reactive programming, travaille sur des flux d'événements<br>
+- component = fonction, et donc composition de fonctions pour faire une interface (syntaxe déclarative jsx)<br>
+- fonction qui prend en entrée le state et qui génère du html / l'arbre dom de l'appli<br>
 </aside>
+
+
