@@ -6,7 +6,9 @@
 function allerAuBar() {
   return new Promise(function (resolve, reject) {
     boireTrenteBieres()
-      .done(resolve)
+      .done(function(){
+      	resolve('et maintenant ?')
+      })
       .fail(reject)
   }
 }

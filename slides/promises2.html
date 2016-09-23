@@ -7,8 +7,8 @@ function onSortCeSoir() {
   return new Promise(function (resolve, reject) {
     $.ajax('http://api.meteofrance.com/soir')
       .done(function (meteo) {
-        if (meteo.pluie) reject();
-        else resolve();
+        if (! meteo.pluie) resolve()
+        else reject(new Error('il pleut'))
       })
       .fail(reject)
   }

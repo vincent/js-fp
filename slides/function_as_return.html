@@ -1,7 +1,9 @@
 <h4>Une ƒ° en retour</h4>
 <pre><code class="javascript" data-trim data-noescape>
 function transpose (interval) {
+  // creation d'une nouvelle fonction
   return function (note) {
+    // ayant son propre scope
     return note + interval;
   }
 }
@@ -25,3 +27,8 @@ function transpose (type) {
   }
 }
 </code></pre>
+
+<aside class="notes">
+  octave fait référence à une nouvelle fonction<br>
+  qui, quand on l'appelle, ajoute 8 à l'argument passé
+</aside>
