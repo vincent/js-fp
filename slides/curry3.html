@@ -1,0 +1,22 @@
+<h1>Petit Exercice</h1>
+
+Implémenter map, join, addToDomElem<br>
+en y mettant un peu de curry<br>
+
+<pre><code class="javascript" data-trim data-noescape>
+function displayNotes(elem) {
+  return pipe(
+    map(noteValueToText),
+    join(' '),
+    addToDomElem(elem)
+  );
+}
+
+var outputNotes = displayNotes('output');
+outputNotes([1,2,3]);
+</code></pre>
+
+
+<aside class="notes">
+
+</aside>
