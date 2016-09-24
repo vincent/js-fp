@@ -1,29 +1,42 @@
 <img class="workimg" src="css/workimg/johnny-automatic-splitting-end-grain-800px.png" style="height:33%;position:absolute;right:-19%;top:51%">
 <h1>Monades</h1>
 
-<blockquote>
-  <a href="https://www.youtube.com/watch?v=dkZFtimgAcM">Les monades sont maudites, une fois que vous avez compris le concept, 
+<blockquote style="font-size: 0.7em">
+  <a href="https://www.youtube.com/watch?v=dkZFtimgAcM">Les monades sont maudites, une fois que vous avez compris le concept,<br>
   vous perdez toute capacité à l'expliquer</a> -- Douglas Crockford
 </blockquote>
+<style>
+dl.monad dd {
+  display: inline;
+  margin: 0;
+}
+dl.monad dd:after{
+  display: block;
+  content: '';
+}
+dl.monad dt{
+  display: inline-block;
+  min-width: 100px;
+}
+</style>
 
 <ul>
-  <li>Conteneur avec un comportement spécifique</li>
-  <li>Permet de chaîner des opérations</li>
+  <li>Objet conteneur dédié au chaînage</li>
+  <li>Résout problèmes récurrents</li>
   <li>Exemples:
-    <ul>
-      <li>Maybe: gestion des valeurs vides</li>
-      <li>Either: gestion des erreurs</li>
-      <li>Continuation: gestion l'asynchrone (= Promise)</li>
-    </ul>
+    <dl class="monad">
+      <dt>Maybe:</dt><dd> gestion des valeurs vides</dd>
+      <dt>Either:</dt><dd> gestion des erreurs</dd>
+      <dt>Continuation:</dt><dd> gestion l'asynchrone (= Promise)</dd>
+    </dl>
   </li>
   </ul>
 
 
 <aside class="notes">
 
+comme dans composition, pratique de chaîner les traitements<br>
+On chaîne habituellement sur des tableaux ou des objets (ex: jQuery)<br>
+problèmes récurrents dans le chainage -> objets spécifiques pour répondre à ces problèmes<br>
+
 </aside>
-
-<!--
--> either et maybe
-
--->

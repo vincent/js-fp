@@ -1,0 +1,19 @@
+<img class="workimg" src="css/workimg/johnny-automatic-splitting-end-grain-800px.png" style="height:33%;position:absolute;right:-19%;top:51%">
+<h1>Monades</h1>
+
+2 méthodes de base
+<pre><code id="composition" class="javascript" data-trim data-noescape>
+// - un constructeur, encapsule un objet dans une monade
+var a = new Monad("plop");
+
+// - une méthode flatMap, applique une fonction aux objets contenus 
+// et renvoie une monade 
+
+a.flatMap(function(s) {return s.replace("plop", "coin")});
+// -> Monad("coin")
+</code></pre>
+
+<aside class="notes">
+flatMap pour éviter d'encapsuler des monades dans des monades.<br>
+Si on rajoute flatMap à la classe Array, c'est alors une monade
+</aside>

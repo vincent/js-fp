@@ -10,9 +10,9 @@ Comment débugguer un pipe() ?<br>
 function displayNotes(elem) {
   pipe(
     map(noteValueToText),
-    tap(alert),
+    <b style="color:red">tap(alert),</b>
     join(' '),
-    trace('après le join()'),
+    <b style="color:red">trace('après le join()'),</b>
     addToDomElem(elem)
   );
 }

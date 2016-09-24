@@ -1,11 +1,23 @@
 <h1>Monade: Maybe</h1>
 
-<ul>
-  <li>Soit un objet, soit <em>null</em></li>
-</ul>
+<blockquote>
+Soit un objet, soit <em>null</em>
+</blockquote>
+<pre><code id="composition" class="javascript" data-trim data-noescape>
+// création d'un Maybe
+var a = Maybe.some(object);
+var b = Maybe.none();
 
+// chaîner
+var c = a.flatMap(task); 
+// task n'a pas besoin de gérer le cas null / undefined
+
+// récupérer la valeur (si nécessaire)
+var d = c.getOrElse(default);
+var e = c.isNone()
+</code></pre>
 
 <aside class="notes">
-
+utile pour éviter de dupliquer des tests de valeurs null ou undefined dans chaque fonction d'une chaîne
 </aside>
 

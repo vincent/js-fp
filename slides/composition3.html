@@ -7,9 +7,9 @@
 var notes = [ 1, 2, 3 ]
 
 function displayNotes(elem, notes) {
-	addToDomElem(elem, 
-		notes.map(noteValueToText)
-			.join(' '));
+  addToDomElem(elem, 
+    notes.map(noteValueToText)
+      .join(' '));
 }
 
 var outputNotes = displayNotes('output', notes);
