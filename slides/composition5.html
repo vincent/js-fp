@@ -1,0 +1,22 @@
+<img class="workimg" src="css/workimg/johnny-automatic-Mississippi-pilot-800px.png" style="height:50%;position:absolute;left:-21%;top:39%">
+<h1>Tap() et trace()</h1>
+
+Comment débugguer un pipe() ?<br>
+
+<!-- exemple -->
+<pre><code class="javascript" data-trim data-noescape>
+// avec tap() et trace() !
+
+function displayNotes(elem) {
+  pipe(
+    map(noteValueToText),
+    tap(alert),
+    join(' '),
+    trace('après le join()'),
+    addToDomElem(elem)
+  );
+}
+
+</code></pre>
+
+

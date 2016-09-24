@@ -1,18 +1,22 @@
 <h1>Composition</h1>
 
 <!-- exemple -->
-<pre><code class="javascript" data-trim data-noescape>
-//exemple fonctionnel
+<pre><code id="composition" class="javascript" data-trim data-noescape>
+//exemple fonctionnel basique
 
-function displayNotes(elem) {
-  return pipe(
-    map(noteValueToText),
-    join(' '),
-    addToDomElem(elem)
-  );
+var notes = [ 1, 2, 3 ]
+
+function displayNotes(elem, notes) {
+	addToDomElem(elem, 
+		notes.map(noteValueToText)
+			.join(' '));
 }
 
-var outputNotes = displayNotes('output');
-outputNotes([1,2,3]);
-
+var outputNotes = displayNotes('output', notes);
 </code></pre>
+
+<aside class="notes">
+chaînage simple (à la jQuery). Déjà un peu plus déclaratif, mais pourrait être plus lisible<br>
+On aimerait avoir la séquence d'opérations dans l'ordre avec l'affichage en dernier.<br>
+
+</aside>
