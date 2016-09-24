@@ -1,11 +1,26 @@
 <h1>Monade: Either</h1>
 
-<ul>
-  <li>Gestion des erreurs</li>
-</ul>
+<blockquote>
+Soit une valeur, soit une erreur.
+</blockquote>
+
+<pre><code  class="javascript" data-trim data-noescape>
+// Création d'un Either
+var a = Either.Right(value);
+var b = Either.Left(error);
+
+// chaîner
+var c = b.flatMap(task)
+// task ne sera appliquée que si pas d'erreur
+
+// accéder à la valeur, gérer les erreurs
+b.getOrElse(logFailure)
+
+</code></pre>
+
 
 
 <aside class="notes">
-
+même principe que maybe, éviter de gérer des exceptions ou autres dans une chaîne.
 </aside>
 
