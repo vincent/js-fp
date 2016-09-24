@@ -10,7 +10,7 @@ Applique une fonction à chaque élément, et<br> retourne <b>les résultats</b>
 var auteurs = [ 'Beethoven', 'Mozart', 'Bach' ];
 
 function biographie (auteur) {
-  F.wikipedia(auteur).then(function(c) {console.log(auteur+': '+c)});
+  return F.wikipedia(auteur);
 }
 
 var bios = auteurs.map(biographie);
