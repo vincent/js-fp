@@ -1,23 +1,21 @@
 <h1>Currying</h1>
 
 
-<pre><code id="composition" class="javascript" data-trim data-noescape>
-function trace(label, message) {
-  console.log(label+': '+message);
-}
-
-function trace_curry(label) {
-  return function (message) {
-    trace(label, message);
+<pre><code class="javascript" data-trim data-noescape>
+function transpose (interval) {
+  // creation d'une nouvelle fonction
+  return function (note) {
+    // ayant son propre scope
+    return note + interval;
   }
 }
 
-var trace_event = trace_curry('event');
-trace_event('init');
-// affiche dans la console 'event: init'
+var octave = transpose(8);
+octave(1) //  9
+octave(2) // 10
 </code></pre>
 
 
 <aside class="notes">
-
+- il existe une fonction curry dans lodash qui convertit toute fonction directement en sa version curryée
 </aside>

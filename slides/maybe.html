@@ -9,7 +9,7 @@ var a = Maybe.some(object);
 var b = Maybe.none();
 
 // chaîner
-var c = a.flatMap(task); 
+var c = a.chain(task); 
 // task n'a pas besoin de gérer le cas null / undefined
 
 // récupérer la valeur (si nécessaire)

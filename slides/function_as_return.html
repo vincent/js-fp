@@ -13,20 +13,6 @@ octave(1) //  9
 octave(2) // 10
 </code></pre>
 
-<br>
-
-<pre class="fragment"><code class="javascript" data-trim data-noescape>
-function transpose (type) {
-  switch (type) {
-    case 'octave': return function (note) {
-                            return note + 8;
-                          }
-    case 'note': return function (note) {
-                          return note + 1;
-                        }
-  }
-}
-</code></pre>
 
 <aside class="notes">
   octave fait référence à une nouvelle fonction<br>

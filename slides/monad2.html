@@ -6,14 +6,15 @@
 // - un constructeur, encapsule un objet dans une monade
 var a = new Monad("plop");
 
-// - une méthode flatMap, applique une fonction aux objets contenus 
-// et renvoie une monade 
+// - une méthode chain, applique une fonction aux objets contenus 
+// et renvoie une monade (= flatMap)
 
 a.flatMap(function(s) {return s.replace("plop", "coin")});
 // -> Monad("coin")
 </code></pre>
 
 <aside class="notes">
+méthode chain ou Flatmap<br>
 flatMap pour éviter d'encapsuler des monades dans des monades.<br>
 Si on rajoute flatMap à la classe Array, c'est alors une monade
 </aside>
