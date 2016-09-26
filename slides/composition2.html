@@ -7,15 +7,15 @@
 var notes = [ 1, 2, 3 ]
 
 function noteValueToText(note) {
-  var notes = [ 'do', 'ré', 'mi', 'fa' , 'sol', 'la', 'si'];
-  return notes[note % 7];
+  var notes = [ 'do', 'ré', 'mi', 'fa' , 'sol', 'la', 'si']
+  return notes[note % 7]
 }
 
 function displayNotes(notes, elem) {
-  var buffer = '';
-  for (var i=0; i< notes.length; i++) {
-    buffer += noteValueToText(notes[i])+ ' ';
+  var buffer = ''
+  for (var i = 0; i < notes.length; i++) {
+    buffer += noteValueToText(notes[i]) + ' '
   }
-  document.getElementById(elem).innerHTML = buffer;
+  document.getElementById(elem).innerHTML = buffer
 }
 </code></pre>

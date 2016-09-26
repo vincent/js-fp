@@ -6,11 +6,11 @@ function transpose (interval) {
   // creation d'une nouvelle fonction
   return function (note) {
     // ayant son propre scope
-    return note + interval;
+    return note + interval
   }
 }
 
-var octave = transpose(8);
+var octave = transpose(8)
 octave(1) //  9
 octave(2) // 10
 </code></pre>

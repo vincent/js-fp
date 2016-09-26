@@ -7,10 +7,10 @@ Réduit une liste, en appliquant une fonction à chaque<br> élément, et retour
 <br>
 
 <pre><code class="javascript" data-trim data-noescape>
-var liste = [ -1, -2, 3, 4 ];
+var liste = [ -1, -2, 3, 4 ]
 
 function positif(acc, e) {
-  return acc + (e >= 0);
+  return acc + (e >= 0 ? 1 : 0)
 }
 
 liste.reduce(positif, 0) // 2

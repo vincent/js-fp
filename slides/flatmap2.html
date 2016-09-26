@@ -5,10 +5,10 @@
 // effet "chord" sur un flux midi
 // joue en parallèle de chaque note, note+2 et note+4
 
-var midiStream = [1, 5];
+var midiStream = [1, 5]
 
 midiStream.flatMap(function(note) {
-  return [transpose(2)(note), transpose(4)(note)];
+  return [transpose(2)(note), transpose(4)(note)]
 })
 
 // retourne [1, 3, 5, 5, 7, 9]

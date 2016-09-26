@@ -10,8 +10,8 @@ Applique une fonction à chaque élément, et<br> retourne une liste <b>"aplatie
 <pre><code class="javascript" data-trim data-noescape>
 // définition de flatMap
 // https://gist.github.com/samgiles/762ee337dff48623e729
-Array.prototype.flatMap = function(lambda) { 
-  return Array.prototype.concat.apply([], this.map(lambda)); 
+Array.prototype.flatMap = function (lambda) { 
+  return Array.prototype.concat.apply([], this.map(lambda)) 
 };
 
 </code></pre>

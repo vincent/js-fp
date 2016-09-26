@@ -4,12 +4,12 @@
 2 méthodes de base
 <pre><code id="composition" class="javascript" data-trim data-noescape>
 // - un constructeur, encapsule un objet dans une monade
-var a = new Monad("plop");
+var a = new Monad("plop")
 
 // - une méthode chain, applique une fonction aux objets contenus 
 // et renvoie une monade (= flatMap)
 
-a.flatMap(function(s) {return s.replace("plop", "coin")});
+a.flatMap(function(s) {return s.replace("plop", "coin")})
 // -> Monad("coin")
 </code></pre>
 

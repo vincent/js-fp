@@ -5,15 +5,15 @@ Soit un objet, soit <em>null</em>
 </blockquote>
 <pre><code  class="javascript" data-trim data-noescape>
 // création d'un Maybe
-var a = Maybe.some(object);
-var b = Maybe.none();
+var a = Maybe.some(object)
+var b = Maybe.none()
 
 // chaîner
 var c = a.chain(task); 
 // task n'a pas besoin de gérer le cas null / undefined
 
 // récupérer la valeur (si nécessaire)
-var d = c.orElse(default);
+var d = c.orElse(default)
 var e = c.isNone()
 </code></pre>
 
