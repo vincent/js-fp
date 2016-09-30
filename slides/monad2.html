@@ -9,7 +9,7 @@ var a = new Monad("plop")
 // - une méthode chain, applique une fonction aux objets contenus 
 // et renvoie une monade (= flatMap)
 
-a.flatMap(function(s) {return s.replace("plop", "coin")})
+a.chain(function(s) {return s.replace("plop", "coin")})
 // -> Monad("coin")
 </code></pre>
 

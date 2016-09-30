@@ -8,7 +8,7 @@
 var midiStream = [1, 5]
 
 midiStream.flatMap(function(note) {
-  return [transpose(2)(note), transpose(4)(note)]
+  return [note, transpose(2)(note), transpose(4)(note)]
 })
 
 // retourne [1, 3, 5, 5, 7, 9]

@@ -2,11 +2,9 @@
 un composant = une fonction !
 
 <pre><code class="javascript" data-trim data-noescape>
-import React from 'react';
-
-const HelloWorld = {{name}} =>  {
-  const sayHi = (event) => {
-    alert(`Hi ${name}!§`);
+function HelloWorld (name) {
+  function sayHi (event) {
+    alert("Hi " + name);
   };
   return {
     &lt;div&gt;
